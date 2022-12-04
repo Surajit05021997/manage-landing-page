@@ -1,0 +1,233 @@
+:root {
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-100: hsl(13, 100%, 96%);
+  --clr-primary-400: hsl(228, 39%, 23%);
+  --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-200: hsl(216, 2%, 54%);
+  --clr-neutral-150: hsla(216, 2%, 54%, 0.25);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --font-family: 'Be Vietnam Pro', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-family: var(--font-family);
+}
+h1 {
+  font-size: 48px;
+  color: var(--clr-primary-400);
+}
+h2 {
+  font-size: 32px;
+  color: var(--clr-primary-400);
+}
+h3 {
+  font-size: 24px;
+  color: var(--clr-primary-400);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0px 16px;
+}
+.primary-button {
+  padding: 16px 32px;
+  background-color: var(--clr-accent-400);
+  border: none;
+  border-radius: 24px;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+.primary-button:hover {
+  box-shadow: 0 3px 10px hsla(12, 100%, 67%, 0.75);
+}
+.secondary-button {
+  padding: 16px 32px;
+  background-color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 24px;
+  color: var(--clr-accent-400);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+.secondary-button:hover {
+  box-shadow: 0 3px 10px hsla(0, 0%, 100%, 0.75);
+}
+section .container {
+  display: flex;
+  gap: 32px;
+}
+
+/*Utility class*/
+.mb-4 {
+  margin-bottom: 32px;
+}
+.mr-2 {
+  margin-right: 16px;
+}
+.mr-6 {
+  margin-right: 48px;
+}
+.w-85 {
+  width: 85%;
+}
+.d-block {
+  display: block !important;
+}
+.d-none {
+  display: none !important;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-text {
+  color: var(--clr-neutral-200);
+}
+
+/*Header Styles*/
+header {
+  padding: 48px 0px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.primary-nav ul {
+  display: flex;
+  gap: 32px;
+}
+.primary-nav ul a {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-semi-bold);
+  transition: color 0.2s;
+}
+.primary-nav ul a:hover {
+  color: var(--clr-neutral-200);
+}
+.icon-hamburger {
+  display: none;
+}
+
+/*Mobile Navbar*/
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+.mobile-nav img {
+  position: absolute;
+  top: 48px;
+  right: 24px;
+  cursor: pointer;
+}
+.mobile-nav nav {
+  width: 300px;
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 96px;
+  padding: 48px 0;
+  background-color: white;
+  border-radius: 4px;
+}
+.mobile-nav nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mobile-nav nav ul a {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-semi-bold);
+  transition: color 0.2s;
+}
+.mobile-nav nav ul a:hover {
+  color: var(--clr-neutral-200);
+}
+
+/*Main*/
+section .container > * {
+  flex: 1;
+}
+.main-sub-heading {
+  display: flex;
+  align-items: center;
+}
+.heading-number {
+  font-size: 24px;
+  padding: 12px 32px;
+  background-color: var(--clr-accent-400);
+  border-radius: 48px;
+  color: var(--clr-neutral-100);
+}
+.main-text-margin {
+  margin-left: 107.16px;
+}
+.bottom-section-wrapper {
+  background-color: var(--clr-accent-400);
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  height: 160px;
+  padding: 0 16px;
+}
+.bottom-section h2 {
+  color: var(--clr-neutral-100);
+}
+
+
+@media(max-width: 991px) {
+  h1 {
+    font-size: 32px;
+  }
+  .primary-nav, .navbar-button {
+    display: none;
+  }
+  .icon-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  section .container {
+    flex-direction: column;
+    padding: 0px 32px;
+  }
+  .main-text-margin {
+    margin-left: 0px;
+  }
+  .bottom-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+}
